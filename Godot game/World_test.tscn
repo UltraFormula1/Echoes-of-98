@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cq1rum3aq4346"]
+
+[ext_resource type="PackedScene" uid="uid://dl2hfbxgs1p3c" path="res://Duneiro Test.glb" id="1_mm5qm"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Duneiro Test" parent="." instance=ExtResource("1_mm5qm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.62324, 0, 2.2166)
