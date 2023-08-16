@@ -5,7 +5,8 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mn3vf"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
-transform = Transform3D(2.00877, 0, 0, 0, 2.00877, 0, 0, 0, 2.00877, 0, 0, 0)
+transform = Transform3D(1.89615, 0, 0, 0, 1.89615, 0, 0, 0, 1.89615, 0, 0, 0)
+floor_max_angle = 0.872665
 script = ExtResource("1_ifeg5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

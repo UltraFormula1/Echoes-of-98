@@ -45,5 +45,5 @@ camera_attributes = SubResource("CameraAttributesPractical_acu1q")
 [node name="Duneiro Test" parent="." instance=ExtResource("1_mm5qm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.62324, 0, 2.2166)
 
-[node name="CharacterBody3D2" parent="." instance=ExtResource("2_wbhl6")]
-transform = Transform3D(2.09393, 0, 0, 0, 2.09393, 0, 0, 0, 2.09393, -0.459996, 1.39687, 2.32977)
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_wbhl6")]
+transform = Transform3D(1.75734, 0, 0, 0, 1.75734, 0, 0, 0, 1.75734, -28.0275, 1.97822, -4.7838)
