@@ -46,4 +46,4 @@ camera_attributes = SubResource("CameraAttributesPractical_acu1q")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.62324, 0, 2.2166)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_wbhl6")]
-transform = Transform3D(1.75734, 0, 0, 0, 1.75734, 0, 0, 0, 1.75734, -28.0275, 1.97822, -4.7838)
+transform = Transform3D(1.44459, 0, 0, 0, 1.44459, 0, 0, 0, 1.44459, -28.0275, 1.97822, -4.7838)
