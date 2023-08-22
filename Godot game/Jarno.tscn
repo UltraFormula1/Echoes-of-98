@@ -14,3 +14,26 @@ shape = SubResource("CapsuleShape3D_mn3vf")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.497818, 0, 0, 0, 0.497818, 0, 0, 0, 0.497818, 0, 0.525673, -0.19836)
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.514538, 0)
+target_position = Vector3(0, 0, -1.6)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CollectionTracker" type="Label" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="InteractionNotifier" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

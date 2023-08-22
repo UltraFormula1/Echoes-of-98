@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqkthxo2pa2ld"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_lchdf"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ooigy"]
+
+[node name="Gift_Pickup" type="Area3D" groups=["Pickup"]]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_lchdf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_ooigy")
