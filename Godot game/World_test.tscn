@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cq1rum3aq4346"]
+[gd_scene load_steps=9 format=3 uid="uid://cq1rum3aq4346"]
 
 [ext_resource type="PackedScene" uid="uid://dl2hfbxgs1p3c" path="res://Duneiro Test.glb" id="1_mm5qm"]
 [ext_resource type="PackedScene" uid="uid://bqtra63ftctht" path="res://Jarno.tscn" id="2_wbhl6"]
 [ext_resource type="PackedScene" uid="uid://dqkthxo2pa2ld" path="res://gift_pickup.tscn" id="3_1kf1b"]
+[ext_resource type="PackedScene" uid="uid://dursj3dpm8eld" path="res://Duneiro del Capogena.glb" id="4_ugi8q"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1hv84"]
 sky_top_color = Color(0.258824, 0.466667, 0.643137, 1)
@@ -45,9 +46,13 @@ camera_attributes = SubResource("CameraAttributesPractical_acu1q")
 
 [node name="Duneiro Test" parent="." instance=ExtResource("1_mm5qm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.62324, 0, 2.2166)
+visible = false
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_wbhl6")]
-transform = Transform3D(1.44459, 0, 0, 0, 1.44459, 0, 0, 0, 1.44459, -28.0275, 1.97822, -4.7838)
+transform = Transform3D(1.6331, 0, 0, 0, 1.6331, 0, 0, 0, 1.6331, -15.9016, 3.68582, -34.9986)
 
 [node name="Gift_Pickup" parent="." instance=ExtResource("3_1kf1b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.0459, 1.29872, -1.02007)
+
+[node name="Duneiro del Capogena" parent="." instance=ExtResource("4_ugi8q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.152817, 0.506959, 2.07539)

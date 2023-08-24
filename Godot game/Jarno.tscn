@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Jarno.gd" id="1_ifeg5"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mn3vf"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ga8k5"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 transform = Transform3D(1.89615, 0, 0, 0, 1.89615, 0, 0, 0, 1.89615, 0, 0, 0)
@@ -10,7 +10,7 @@ floor_max_angle = 0.872665
 script = ExtResource("1_ifeg5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CapsuleShape3D_mn3vf")
+shape = SubResource("CapsuleShape3D_ga8k5")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.497818, 0, 0, 0, 0.497818, 0, 0, 0, 0.497818, 0, 0.525673, -0.19836)
