@@ -1,13 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://dqkthxo2pa2ld"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_lchdf"]
+[ext_resource type="PackedScene" uid="uid://bru141sr4gf16" path="res://HWBushPainting.glb" id="1_vdf5h"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_ooigy"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_268im"]
 
 [node name="Gift_Pickup" type="Area3D" groups=["Pickup"]]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("SphereMesh_lchdf")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("SphereShape3D_ooigy")
+transform = Transform3D(0.133257, 0, 0, 0, 1.50719, 0, 0, 0, 1.07705, 0, 0, 0)
+shape = SubResource("BoxShape3D_268im")
+
+[node name="HWBushPainting" parent="." instance=ExtResource("1_vdf5h")]
+transform = Transform3D(0.0918826, 0, 0, 0, 0.0918826, 0, 0, 0, 0.0918826, 0, 0, 0)
