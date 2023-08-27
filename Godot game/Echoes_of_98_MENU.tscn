@@ -1,16 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bt8tky0f831hx"]
+[gd_scene load_steps=6 format=3 uid="uid://bt8tky0f831hx"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_waylr"]
-
-[sub_resource type="SystemFont" id="SystemFont_dpd2a"]
-
-[sub_resource type="SystemFont" id="SystemFont_x4yj0"]
-font_italic = true
-
-[sub_resource type="LabelSettings" id="LabelSettings_wp24j"]
-font = SubResource("SystemFont_x4yj0")
+[ext_resource type="PackedScene" uid="uid://chqi6g771miui" path="res://menusong.tscn" id="2_2t5s1"]
+[ext_resource type="Texture2D" uid="uid://bwlqdnc8ap6tp" path="res://ECHOES_of__98-removebg-preview.png" id="2_ij8mb"]
+[ext_resource type="Texture2D" uid="uid://b0s1bxq7aiumj" path="res://Portofino_GettyImages-595873273.png" id="4_ahndb"]
+[ext_resource type="Texture2D" uid="uid://b3xennb3hjpr4" path="res://Charming-Seaside-Villages-of-Italy.png" id="5_gowha"]
 
 [node name="Menu" type="Control"]
+process_mode = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,27 +16,27 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_waylr")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer1" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 53.0
-offset_top = -293.0
-offset_right = 223.0
-offset_bottom = -192.0
+offset_left = 107.0
+offset_top = -486.0
+offset_right = 277.0
+offset_bottom = -385.0
 grow_vertical = 0
-scale = Vector2(2.38957, 2.39331)
+scale = Vector2(4.5765, 4.25224)
 
-[node name="StartButton" type="Button" parent="VBoxContainer"]
+[node name="StartButton" type="Button" parent="VBoxContainer1"]
 layout_mode = 2
 text = "START GAME"
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="VBoxContainer1"]
 layout_mode = 2
 text = "OPTIONS/CONTROLS"
 
-[node name="ExitButton" type="Button" parent="VBoxContainer"]
+[node name="ExitButton" type="Button" parent="VBoxContainer1"]
 layout_mode = 2
 text = "QUIT GAME"
 
@@ -48,19 +45,86 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -341.0
-offset_right = -233.0
+offset_left = -54.0
+offset_right = 54.0
 offset_bottom = 26.0
 grow_horizontal = 2
 scale = Vector2(7.02759, 8.00023)
 
-[node name="Label" type="Label" parent="VBoxContainer2"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_dpd2a")
-text = "ECHOES of '98"
-label_settings = SubResource("LabelSettings_wp24j")
-horizontal_alignment = 1
+[node name="EchoesOf98-removebg-preview" type="Sprite2D" parent="VBoxContainer2"]
+position = Vector2(11.2414, 31.9991)
+scale = Vector2(0.277257, 0.257493)
+texture = ExtResource("2_ij8mb")
 
-[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[node name="AudioStreamPlayer2D" parent="." instance=ExtResource("2_2t5s1")]
+volume_db = 8.432
+
+[node name="PortofinoGettyImages-595873273" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(1276, 712)
+scale = Vector2(0.675718, 0.568294)
+texture = ExtResource("4_ahndb")
+
+[node name="Options" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Options"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 3339.8
+offset_top = 11.0
+offset_right = 3499.8
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(9.3627, 7.92876)
+
+[node name="Labels" type="VBoxContainer" parent="Options/HBoxContainer3"]
+layout_mode = 2
+
+[node name="fullscreen" type="Label" parent="Options/HBoxContainer3/Labels"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Fullscreen"
+
+[node name="borderless" type="Label" parent="Options/HBoxContainer3/Labels"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Borderless"
+
+[node name="vsync" type="Label" parent="Options/HBoxContainer3/Labels"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "V-Sync"
+
+[node name="Checkboxes" type="VBoxContainer" parent="Options/HBoxContainer3"]
+layout_mode = 2
+
+[node name="fullscreen" type="CheckBox" parent="Options/HBoxContainer3/Checkboxes"]
+layout_mode = 2
+
+[node name="borderless" type="CheckBox" parent="Options/HBoxContainer3/Checkboxes"]
+layout_mode = 2
+
+[node name="vsync" type="CheckBox" parent="Options/HBoxContainer3/Checkboxes"]
+layout_mode = 2
+
+[node name="Return" type="Button" parent="Options/HBoxContainer3"]
+layout_mode = 2
+text = "Back"
+
+[node name="Charming-seaside-villages-of-italy" type="Sprite2D" parent="Options"]
+z_index = -3
+position = Vector2(3972.79, 1095)
+scale = Vector2(1.78906, 0.796404)
+texture = ExtResource("5_gowha")
+
+[connection signal="pressed" from="VBoxContainer1/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer1/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer1/ExitButton" to="." method="_on_exit_button_pressed"]

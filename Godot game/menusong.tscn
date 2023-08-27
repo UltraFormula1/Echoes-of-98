@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://chqi6g771miui"]
+
+[ext_resource type="AudioStream" uid="uid://chel0xu40n78e" path="res://miami-vice-royalty-free-copyright-safe-music.mp3" id="1_w0tpm"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_w0tpm")
+autoplay = true

@@ -11,18 +11,17 @@ config_version=5
 [application]
 
 config/name="Echoes of '98"
+run/main_scene="res://Echoes_of_98_MENU.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
-config/icon="res://icon.svg"
+run/max_fps=165
+boot_splash/bg_color=Color(0.129412, 0.376471, 0.490196, 1)
+boot_splash/image="res://ECHOES_of__98-removebg-preview.png"
+config/icon="res://ECHOES_of__98-removebg-preview.png"
 
 [display]
 
 window/size/viewport_width=2560
 window/size/viewport_height=1440
-window/size/borderless=true
-
-[filesystem]
-
-import/blender/enabled=false
 
 [input]
 

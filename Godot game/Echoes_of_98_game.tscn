@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://csnv3syy1ycfv"]
+[gd_scene load_steps=12 format=3 uid="uid://csnv3syy1ycfv"]
 
 [ext_resource type="PackedScene" uid="uid://dl2hfbxgs1p3c" path="res://Duneiro Test.glb" id="1_bbyuq"]
+[ext_resource type="Script" path="res://Echoes_of_98_game.gd" id="1_sp0k6"]
 [ext_resource type="PackedScene" uid="uid://bqtra63ftctht" path="res://Jarno.tscn" id="2_nl1kg"]
 [ext_resource type="PackedScene" uid="uid://dqkthxo2pa2ld" path="res://gift_pickup.tscn" id="3_cklpt"]
 [ext_resource type="PackedScene" uid="uid://cjkwsq2euahe" path="res://DuneiroWorld.tscn" id="4_0cbnj"]
+[ext_resource type="Script" path="res://Area3D.gd" id="6_rp3bt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1hv84"]
 sky_top_color = Color(0.258824, 0.466667, 0.643137, 1)
@@ -32,7 +34,10 @@ adjustment_saturation = 0.65
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_acu1q"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0bka0"]
+
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_sp0k6")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.573576, -0.312155, 0.757344, 0, 0.924546, 0.38107, -0.819152, 0.218573, -0.530298, 0, 0, 0)
@@ -54,6 +59,16 @@ transform = Transform3D(1.6331, 0, 0, 0, 1.6331, 0, 0, 0, 1.6331, -27.0208, 3.68
 floor_snap_length = 0.2
 
 [node name="Gift_Pickup" parent="." instance=ExtResource("3_cklpt")]
-transform = Transform3D(0.0153787, 0, 1.80558, 0, 1.80564, 0, -1.80558, 0, 0.0153787, -178.301, 2.57574, 50.4647)
+transform = Transform3D(0.0153787, 0, 1.80558, 0.358863, 1.76962, -0.00305655, -1.76956, 0.358875, 0.0150719, -187.641, 1.26462, 28.8448)
 
 [node name="Duneiro del Capogena FINAL" parent="." instance=ExtResource("4_0cbnj")]
+
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("6_rp3bt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(674.6, 1.30434e-06, -124.616, -1.27748e-06, 686.014, 2.64843e-07, 124.616, -2.83826e-08, 674.6, 400.32, -344.477, 0)
+shape = SubResource("BoxShape3D_0bka0")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]
