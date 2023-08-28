@@ -6,11 +6,10 @@ var SPEED = 7.0
 @export var walk_speed = 7
 @export var FRICTION = 1
 const JUMP_VELOCITY = 6.0
-
+var paintings_collected = 0
 @onready var ray = $Camera3D/RayCast3D
 @onready var interaction_notifier = $Control/InteractionNotifier
 @onready var collection_tracker = $Control/MarginContainer/CollectionTracker
-@onready var paintings_collected = 0
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -33,8 +32,8 @@ func check_ray_hit():
 			ray.get_collider().queue_free()
 			paintings_collected +=1
 			collection_tracker.text = "Painting's = " + str(paintings_collected)
-		else:
-			interaction_notifier.visible = false
+	else:
+		interaction_notifier.visible = false
 
 func _physics_process(delta):
 	check_ray_hit()

@@ -15,7 +15,7 @@ run/main_scene="res://Echoes_of_98_MENU.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 run/max_fps=165
 boot_splash/bg_color=Color(0.129412, 0.376471, 0.490196, 1)
-boot_splash/image="res://ECHOES_of__98-removebg-preview.png"
+boot_splash/image="res://ECHOES of '98 Splash Screen.png"
 config/icon="res://ECHOES_of__98-removebg-preview.png"
 
 [display]

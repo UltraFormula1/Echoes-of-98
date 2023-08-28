@@ -7,7 +7,7 @@
 [node name="Gift_Pickup" type="Area3D" groups=["Pickup"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.133257, 0, 0, 0, 1.50719, 0, 0, 0, 1.07705, 0, 0, 0)
+transform = Transform3D(0.182426, 0, 0, 0, 1.50202, 0, 0, 0, 1.07335, 0, 0, 0)
 shape = SubResource("BoxShape3D_268im")
 
 [node name="HWBushPainting" parent="." instance=ExtResource("1_vdf5h")]

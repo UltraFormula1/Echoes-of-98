@@ -1,6 +1,5 @@
-[gd_scene load_steps=12 format=3 uid="uid://csnv3syy1ycfv"]
+[gd_scene load_steps=11 format=3 uid="uid://csnv3syy1ycfv"]
 
-[ext_resource type="PackedScene" uid="uid://dl2hfbxgs1p3c" path="res://Duneiro Test.glb" id="1_bbyuq"]
 [ext_resource type="Script" path="res://Echoes_of_98_game.gd" id="1_sp0k6"]
 [ext_resource type="PackedScene" uid="uid://bqtra63ftctht" path="res://Jarno.tscn" id="2_nl1kg"]
 [ext_resource type="PackedScene" uid="uid://dqkthxo2pa2ld" path="res://gift_pickup.tscn" id="3_cklpt"]
@@ -50,14 +49,6 @@ directional_shadow_max_distance = 1000.0
 environment = SubResource("Environment_tglfs")
 camera_attributes = SubResource("CameraAttributesPractical_acu1q")
 
-[node name="Duneiro Test" parent="." instance=ExtResource("1_bbyuq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.62324, 0, 2.2166)
-visible = false
-
-[node name="CharacterBody3D" parent="." instance=ExtResource("2_nl1kg")]
-transform = Transform3D(0.325336, 0, 1.60037, 0, 1.6331, 0, -1.60037, 0, 0.325336, -28.3357, 1.99774, -15.0867)
-floor_snap_length = 0.2
-
 [node name="Gift_Pickup" parent="." instance=ExtResource("3_cklpt")]
 transform = Transform3D(0.0153787, 0, 1.80558, 0.358863, 1.76962, -0.00305655, -1.76956, 0.358875, 0.0150719, -187.641, 1.26462, 28.8448)
 
@@ -70,5 +61,14 @@ script = ExtResource("6_rp3bt")
 transform = Transform3D(674.6, 1.30434e-06, -124.616, -1.27748e-06, 686.014, 2.64843e-07, 124.616, -2.83826e-08, 674.6, 400.32, -344.477, 0)
 shape = SubResource("BoxShape3D_0bka0")
 
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_nl1kg")]
+transform = Transform3D(0.758202, 0, 0, 0, 0.942074, 0, 0, 0, 0.74815, -29.1087, 1.88288, -15.8573)
+
+[node name="Camera3D" parent="CharacterBody3D" index="1"]
+transform = Transform3D(1.31891, 0, 0, 0, 1.06149, 0, 0, 0, 1.33663, 0, 0.450933, 0.106756)
+
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]
+
+[editable path="Duneiro del Capogena FINAL"]
+[editable path="CharacterBody3D"]
