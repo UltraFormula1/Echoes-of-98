@@ -62,10 +62,22 @@ transform = Transform3D(674.6, 1.30434e-06, -124.616, -1.27748e-06, 686.014, 2.6
 shape = SubResource("BoxShape3D_0bka0")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_nl1kg")]
-transform = Transform3D(0.758202, 0, 0, 0, 0.942074, 0, 0, 0, 0.74815, -29.1087, 1.88288, -15.8573)
+transform = Transform3D(0.945508, 0, 0, 0, 1.12412, 0, 0, 0, 0.892721, -29.1087, 1.88288, -15.8573)
 
 [node name="Camera3D" parent="CharacterBody3D" index="1"]
 transform = Transform3D(1.31891, 0, 0, 0, 1.06149, 0, 0, 0, 1.33663, 0, 0.450933, 0.106756)
+
+[node name="Gift_Pickup2" parent="." instance=ExtResource("3_cklpt")]
+transform = Transform3D(1.50569, 0.0206798, 0.0246033, -0.0206854, 1.50589, 0.000176183, -0.0245986, -0.000514073, 1.50583, -79.4568, 3.68206, 73.0379)
+
+[node name="Gift_Pickup3" parent="." instance=ExtResource("3_cklpt")]
+transform = Transform3D(-0.00778081, -0.00154086, -1.80563, 0.192616, 1.79534, -0.0023621, 1.79533, -0.192623, -0.00757205, -111.351, 1.75309, 32.2617)
+
+[node name="Gift_Pickup4" parent="." instance=ExtResource("3_cklpt")]
+transform = Transform3D(0.0153787, 0, 1.80558, 0.358863, 1.76962, -0.00305655, -1.76956, 0.358875, 0.0150719, 181.149, 67.0573, 192.851)
+
+[node name="Gift_Pickup5" parent="." instance=ExtResource("3_cklpt")]
+transform = Transform3D(0.0153787, 0, 1.80558, 0.358863, 1.76962, -0.00305655, -1.76956, 0.358875, 0.0150719, -61.436, 1.34133, -76.7073)
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

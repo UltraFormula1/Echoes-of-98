@@ -8,6 +8,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+		if Input.is_action_just_pressed("ui_cancel"):
+			get_tree().change_scene_to_file("res://Echoes_of_98_MENU.tscn")
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
 
 
