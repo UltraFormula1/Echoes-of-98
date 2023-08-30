@@ -33,6 +33,8 @@ func check_ray_hit():
 			ray.get_collider().queue_free()
 			paintings_collected +=1
 			collection_tracker.text = "Painting's = " + str(paintings_collected)
+			if paintings_collected >= 5:
+				get_tree().change_scene_to_file("res://win_screen.tscn")
 	else:
 		interaction_notifier.visible = false
 

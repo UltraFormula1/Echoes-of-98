@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://csnv3syy1ycfv"]
+[gd_scene load_steps=13 format=3 uid="uid://csnv3syy1ycfv"]
 
 [ext_resource type="Script" path="res://Echoes_of_98_game.gd" id="1_sp0k6"]
 [ext_resource type="PackedScene" uid="uid://bqtra63ftctht" path="res://Jarno.tscn" id="2_nl1kg"]
 [ext_resource type="PackedScene" uid="uid://dqkthxo2pa2ld" path="res://gift_pickup.tscn" id="3_cklpt"]
 [ext_resource type="PackedScene" uid="uid://cjkwsq2euahe" path="res://DuneiroWorld.tscn" id="4_0cbnj"]
+[ext_resource type="AudioStream" uid="uid://bbrgfaexf4xxj" path="res://Quiet City Street Day Ambience  HQ Sound.mp3" id="6_2s07x"]
 [ext_resource type="Script" path="res://Area3D.gd" id="6_rp3bt"]
+[ext_resource type="AudioStream" uid="uid://debjhpb6jq2s3" path="res://y2mate.is -  Relaxing Ambient Instrumental Music For Videos Ethereal by Punch Deck-H4BAEf5V-Yc-192k-1693386226.mp3" id="7_vtnj5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1hv84"]
 sky_top_color = Color(0.258824, 0.466667, 0.643137, 1)
@@ -78,6 +80,15 @@ transform = Transform3D(0.0153787, 0, 1.80558, 0.358863, 1.76962, -0.00305655, -
 
 [node name="Gift_Pickup5" parent="." instance=ExtResource("3_cklpt")]
 transform = Transform3D(0.0153787, 0, 1.80558, 0.358863, 1.76962, -0.00305655, -1.76956, 0.358875, 0.0150719, -61.436, 1.34133, -76.7073)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_2s07x")
+volume_db = 15.0
+autoplay = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_vtnj5")
+autoplay = true
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

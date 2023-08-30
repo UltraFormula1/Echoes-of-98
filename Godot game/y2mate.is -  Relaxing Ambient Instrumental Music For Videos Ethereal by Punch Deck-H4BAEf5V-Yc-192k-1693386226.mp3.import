@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://debjhpb6jq2s3"
+path="res://.godot/imported/y2mate.is -  Relaxing Ambient Instrumental Music For Videos Ethereal by Punch Deck-H4BAEf5V-Yc-192k-1693386226.mp3-9c2ce2044a441764ecbb739691955daa.mp3str"
+
+[deps]
+
+source_file="res://y2mate.is -  Relaxing Ambient Instrumental Music For Videos Ethereal by Punch Deck-H4BAEf5V-Yc-192k-1693386226.mp3"
+dest_files=["res://.godot/imported/y2mate.is -  Relaxing Ambient Instrumental Music For Videos Ethereal by Punch Deck-H4BAEf5V-Yc-192k-1693386226.mp3-9c2ce2044a441764ecbb739691955daa.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

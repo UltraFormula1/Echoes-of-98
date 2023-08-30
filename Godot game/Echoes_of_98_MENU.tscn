@@ -57,7 +57,7 @@ scale = Vector2(0.277257, 0.257493)
 texture = ExtResource("2_ij8mb")
 
 [node name="AudioStreamPlayer2D" parent="." instance=ExtResource("2_2t5s1")]
-volume_db = 8.432
+volume_db = 10.5
 
 [node name="PortofinoGettyImages-595873273" type="Sprite2D" parent="."]
 z_index = -3

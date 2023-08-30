@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbrgfaexf4xxj"
+path="res://.godot/imported/Quiet City Street Day Ambience  HQ Sound.mp3-abe120e8789e559fe5bc263886032454.mp3str"
+
+[deps]
+
+source_file="res://Quiet City Street Day Ambience  HQ Sound.mp3"
+dest_files=["res://.godot/imported/Quiet City Street Day Ambience  HQ Sound.mp3-abe120e8789e559fe5bc263886032454.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

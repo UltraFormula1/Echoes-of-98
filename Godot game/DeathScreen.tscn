@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://blj1kgtveclmm"]
+[gd_scene load_steps=3 format=3 uid="uid://blj1kgtveclmm"]
 
 [ext_resource type="Script" path="res://DeathScreen.gd" id="1_xm4sg"]
+[ext_resource type="AudioStream" uid="uid://bohe7faqp0bjl" path="res://y2mate.is - The Price is Right Losing Horn Sound Effect HD -_asNhzXq72w-192k-1693386966.mp3" id="2_3r0gw"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -54,6 +55,11 @@ text = "Retry"
 [node name="Button2" type="Button" parent="VBoxContainer2"]
 layout_mode = 2
 text = "Quit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_3r0gw")
+volume_db = 1.0
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer2/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer2/Button2" to="." method="_on_button_2_pressed"]
