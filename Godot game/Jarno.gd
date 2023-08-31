@@ -33,8 +33,9 @@ func check_ray_hit():
 			ray.get_collider().queue_free()
 			paintings_collected +=1
 			collection_tracker.text = "Painting's = " + str(paintings_collected)
-			if paintings_collected >= 5:
+			if paintings_collected >= 7:
 				get_tree().change_scene_to_file("res://win_screen.tscn")
+				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else:
 		interaction_notifier.visible = false
 
