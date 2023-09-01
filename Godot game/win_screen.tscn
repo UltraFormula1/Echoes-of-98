@@ -13,10 +13,10 @@ script = ExtResource("1_eymt3")
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(3000, 2000)
 layout_mode = 0
-offset_left = -210.0
-offset_top = -267.0
-offset_right = 2790.0
-offset_bottom = 1733.0
+offset_left = -590.0
+offset_top = -515.0
+offset_right = 2410.0
+offset_bottom = 1485.0
 scale = Vector2(1.24052, 1.24636)
 color = Color(0.282353, 0.556863, 0.439216, 1)
 
