@@ -69,7 +69,7 @@ transform = Transform3D(674.6, 1.30434e-06, -124.616, -1.27748e-06, 686.014, 2.6
 shape = SubResource("BoxShape3D_0bka0")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_nl1kg")]
-transform = Transform3D(0.945508, 0, 0, 0, 1.12412, 0, 0, 0, 0.892721, -29.1087, 1.88288, -15.8573)
+transform = Transform3D(0.912764, 0, 0, 0, 1.279, 0, 0, 0, 0.861805, -29.1087, 1.88288, -15.8573)
 
 [node name="Camera3D" parent="CharacterBody3D" index="1"]
 transform = Transform3D(1.31891, 0, 0, 0, 1.06149, 0, 0, 0, 1.33663, 0, 0.450933, 0.106756)
